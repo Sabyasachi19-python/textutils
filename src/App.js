@@ -15,10 +15,18 @@ function App() {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert('Light mode has been enabled', 'success');
+      document.title = 'TextUtils - Light Mode';
     } else {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert('Dark Blue mode has been enabled', 'success');
+      document.title = 'TextUtils - Dark Blue Mode';
+      setInterval(() => {
+        document.title = 'TextUtils is Amazing';
+      }, 2000);
+      setInterval(() => {
+        document.title = 'Install TextUtils Now';
+      }, 1500);
     }
   }
   const toggleGreenMode = () => {
@@ -27,11 +35,13 @@ function App() {
       setGreenMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert('Light mode has been enabled', 'success');
+      document.title = 'TextUtils - Light Mode';
     } else {
       setMode('dark');
       setGreenMode('dark_green');
       document.body.style.backgroundColor = 'rgb(26, 41, 26)';
       showAlert('Dark Green mode has been enabled', 'success');
+      document.title = 'TextUtils - Dark Green Mode';
     }
   }
   const toggleYellowMode = () => {
@@ -40,11 +50,13 @@ function App() {
       setYellowMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert('Light mode has been enabled', 'success');
+      document.title = 'TextUtils - Light Mode';
     } else {
       setMode('dark');
       setYellowMode('dark_yellow');
       document.body.style.backgroundColor = 'rgb(56, 56, 32)';
       showAlert('Dark Yellow mode has been enabled', 'success');
+      document.title = 'TextUtils - Dark Yellow Mode';
     }
   }
   //'';

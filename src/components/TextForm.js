@@ -4,13 +4,16 @@ export default function TextForm(props) {
         // console.log('Uppercase button was clicked!' + text);
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert('Text Converted to Uppercase','success');
     }
     const handleLowerClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert('Text Converted to Lowercase','success');
     }
     const handleClearAll = () => {
         setText('');
+        props.showAlert('Text Cleared','success');
     }
     const handleEmailExtractor = () => {
         let regex = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi
@@ -18,6 +21,7 @@ export default function TextForm(props) {
             setText("No emails found!");
         } else {
             setText("Extracted Emails : " + text.match(regex) + " ");
+            props.showAlert('email extraction done','success');
         }
 
     }
